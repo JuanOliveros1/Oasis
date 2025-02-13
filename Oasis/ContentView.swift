@@ -3,7 +3,7 @@
 //  Oasis
 //
 //  Created by Ezra Carrillo on 2/12/25.
-//
+// elhadji 
 
 import SwiftUI
 import CoreData
@@ -38,7 +38,7 @@ struct ContentView: View {
                     }
                 }
             }
-            Text("Select an item")
+            Text("Select an  item")
         }
     }
 

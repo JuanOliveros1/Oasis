@@ -10,8 +10,8 @@ import MapKit
 
 struct ContentView: View {
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), // San Francisco
-        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        center: CLLocationCoordinate2D(latitude: 29.7199, longitude: -95.3422), // University of Houston
+        span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07))
 
     var body: some View {
     VStack {

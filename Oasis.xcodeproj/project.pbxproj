@@ -29,9 +29,22 @@
 		CD22B3172D5D834F00F89BBF /* OasisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OasisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CD10B0D72D82370100FAAB48 /* Exceptions for "Oasis" folder in "Oasis" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CD22B2F72D5D834C00F89BBF /* Oasis */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CD22B2FA2D5D834C00F89BBF /* Oasis */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CD10B0D72D82370100FAAB48 /* Exceptions for "Oasis" folder in "Oasis" target */,
+			);
 			path = Oasis;
 			sourceTree = "<group>";
 		};

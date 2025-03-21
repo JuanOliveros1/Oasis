@@ -201,11 +201,22 @@ struct MapView: View {
                 .background(Color.gray.opacity(0.2))
                 
                 // Map
-                Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
-                    .onAppear {
-                        viewModel.CheckIfLocationServicesEnabled()
-                    }
-                    .edgesIgnoringSafeArea(.all)
+                Map(position: $viewModel.cameraPosition) {
+                    UserAnnotation() // shows user location pin
+                }
+                .ignoresSafeArea()
+                .onAppear {
+                    viewModel.CheckIfLocationServicesEnabled()
+                }
+
+
+                
+                .edgesIgnoringSafeArea(.all)
+                
+                .onAppear {
+                    viewModel.CheckIfLocationServicesEnabled()
+                }
+
                 
                 // Bottom Navigation Bar
                 HStack {
@@ -234,13 +245,11 @@ struct MapView: View {
                 .background(Color.gray.opacity(0.2))
             }
             
-           // recenter button
-            Button(action: {
-                viewModel.recenter()
-            }) {
+            // recenter button
+            Button(action: {viewModel.recenter()}){
                 Image(systemName: "location.fill")
                     .padding()
-                    .background(Color.black.opacity(0.6))
+                    .background(Color(.secondarySystemBackground))
                     .clipShape(Circle())
                     .shadow(radius: 10)
             }
@@ -249,9 +258,8 @@ struct MapView: View {
         }
     }
 
-    
-    
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

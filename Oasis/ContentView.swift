@@ -208,8 +208,6 @@ struct MapView: View {
                 .onAppear {
                     viewModel.CheckIfLocationServicesEnabled()
                 }
-
-
                 
                 .edgesIgnoringSafeArea(.all)
                 
@@ -217,7 +215,6 @@ struct MapView: View {
                     viewModel.CheckIfLocationServicesEnabled()
                 }
 
-                
                 // Bottom Navigation Bar
                 HStack {
                     Button(action: { print("Home tapped") }) {
